@@ -7,6 +7,11 @@ Ext.define('App.controller.Viewport', {
 
   views: [
     'Viewport',
+    'ReindeerList',
+  ],
+
+  stores: [
+    'Reindeer'
   ],
 
   refs: [
@@ -15,10 +20,24 @@ Ext.define('App.controller.Viewport', {
       xtype      : 'appviewport',
       ref        : 'viewport',
       autoCreate : true
+    },
+    {
+      selector   : 'reindeerlist',
+      xtype      : 'reindeerlist',
+      ref        : 'reindeerList',
     }
   ],
 
   init: function() {
     this.getViewport();
+    this.getReindeerList().getStore().load();
+
+    this.control({
+      'button[go=refresh-reindeer]' : {
+        tap: function(btn) {
+          this.getReindeerList().getStore().load();
+        }
+      }
+    })
   },
 });
