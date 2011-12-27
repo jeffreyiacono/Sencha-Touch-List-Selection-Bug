@@ -14,9 +14,10 @@ up after reloading.
 
 Clone this repo into a new directory:
 
-`$ mkdir sencha-touch-list-selection-bug && cd $_`
-
-`$ git clone git://github.com/jeffreyiacono/Sencha-Touch-List-Selection-Bug.git`
+```
+$ mkdir sencha-touch-list-selection-bug && cd $_
+$ git clone git://github.com/jeffreyiacono/Sencha-Touch-List-Selection-Bug.git
+```
 
 If you are using [rvm] the repo contains a default `/.rvmrc` file that uses a project setup of `ruby-1.9.2@st-list-reload-issue`. Change as needed.
 
@@ -26,14 +27,14 @@ Next install [Sinatra] to serve up the app:
 
 Now boot up the app:
 
-`$ ruby -rubygems app.rb`
+```
+$ ruby -rubygems app.rb
 
-<code>
 [2011-12-24 16:27:55] INFO  WEBrick 1.3.1<br>
 [2011-12-24 16:27:55] INFO  ruby 1.9.2 (2011-07-09) [x86_64-darwin10.8.0]<br>
 == Sinatra/1.3.1 has taken the stage on 4567 for development with backup from WEBrick<br>
 [2011-12-24 16:27:55] INFO  WEBrick::HTTPServer#start: pid=12269 port=4567
-</code>
+```
 
 Finally visit http://0.0.0.0:4567
 
